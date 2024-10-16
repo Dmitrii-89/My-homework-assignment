@@ -16,7 +16,7 @@ class House:
     def __len__(self):
         return self.number_of_floors
 
-    def __eq__(self, other):    # 1
+    def __eq__(self, other):
         if isinstance(other.number_of_floors, int) and isinstance(other, House):
             return self.number_of_floors == other.number_of_floors
 
