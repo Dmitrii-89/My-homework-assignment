@@ -1,11 +1,10 @@
 class Car:
     def __init__(self, model: str, vin: int, __numbers: str):
         self.model = model
-        self.__vin = vin
-        self.__is_valid_vin(vin)
-        self.__numbers = __numbers #Методы __is_valid_vin и __is_valid_numbers должны вызываться и при создании объекта
-        # (в __init__ при объявлении атрибутов __vin и __numbers).
-        self.__is_valid_numbers(__numbers)
+        if self.__is_valid_vin(vin):
+            self.__vin = vin 
+        if self.__is_valid_numbers(__numbers):
+            self.__numbers = __numbers
 
 
     def __is_valid_vin(self,vin_number):
